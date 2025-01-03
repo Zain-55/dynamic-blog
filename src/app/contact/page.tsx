@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
+import { div } from 'motion/react-client'
 
 export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -36,8 +37,9 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div className="space-y-4 w-[full]">
+   <div className='ml-[500px] w-[600px] my-10'>
+     <form onSubmit={handleSubmit} className=''>
+      <div className="space-y-5 ">
         <div>
           <Label htmlFor="name">Full Name</Label>
           <Input
@@ -73,6 +75,7 @@ export default function ContactForm() {
         </Button>
       </div>
     </form>
+   </div>
   )
 }
 

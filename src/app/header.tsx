@@ -11,6 +11,7 @@ const navItems = [
   { name: 'FAQ', href: '/faq' },
   { name: 'Contact Us', href: '/contact' },
  
+ 
 ]
 
 const getRandomColor = () => {
@@ -46,7 +47,7 @@ export default function Header() {
           >
             <Link href="/" className="text-3xl font-bold text-white">
               <span className="bg-white text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">
-                Logo
+                Blog & News
               </span>
             </Link>
           </motion.div>
@@ -101,10 +102,13 @@ export default function Header() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: (navItems.length + 1) * 0.1 }}
             >
-              <button className="flex items-center space-x-2 bg-white text-purple-600 px-4 py-2 rounded-full hover:bg-opacity-90 transition-colors duration-300">
-                <LogIn className="h-5 w-5" />
-                <span>Login</span>
+             <Link href="/login">
+             <button className="flex items-center space-x-2 bg-white text-purple-600 px-4 py-2 rounded-full hover:bg-opacity-90 transition-colors duration-300" >
+                <LogIn className="h-5 w-5"/>
+                <span>
+                  Login</span>
               </button>
+             </Link>
             </motion.div>
           </div>
 
