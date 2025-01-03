@@ -4,6 +4,8 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 import { Menu, X, Search, LogIn } from 'lucide-react'
+import logo from "../../public/png-01.png"
+import Image from 'next/image'
 
 const navItems = [
   { name: 'Home', href: '/' },
@@ -37,8 +39,8 @@ export default function Header() {
   }
 
   return (
-    <header className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 shadow-lg">
-      <nav className="container mx-auto px-6 py-4">
+    <header className="containor mx-auto bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 shadow-lg">
+      <nav className="container mx-auto px-8 ">
         <div className="flex justify-between items-center">
           <motion.div
             initial={{ opacity: 0, y: -20 }}
@@ -47,7 +49,7 @@ export default function Header() {
           >
             <Link href="/" className="text-3xl font-bold text-white">
               <span className="bg-white text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">
-                Blog & News
+               <Image src={logo} alt='logo' width={90} height={40} />
               </span>
             </Link>
           </motion.div>

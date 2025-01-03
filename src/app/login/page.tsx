@@ -42,7 +42,7 @@ export default function LoginForm() {
       <CardHeader>
         <CardTitle>Login to Your Account</CardTitle>
       </CardHeader>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className='space-x-25'>
         <CardContent className="space-y-4">
           <div className="space-y-2">
             <Label htmlFor="email">Email</Label>
